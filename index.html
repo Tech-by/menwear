@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENWEAR | Luxury Indian Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --glass: rgba(255, 255, 255, 0.1); --accent: #00f2fe; --bg: #050810; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--bg); color: white; overflow-x: hidden; }
+        .glass { background: var(--glass); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; }
+        
+        nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; padding: 15px 30px; display: flex; justify-content: space-between; z-index: 1000; transition: 0.5s; }
+        .logo { font-weight: 800; letter-spacing: 2px; } .logo span { color: var(--accent); }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; opacity: 0.8; }
+
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80&w=1974') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero-box { padding: 50px; max-width: 800px; }
+        h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1; }
+        .btn { background: var(--accent); color: black; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; }
+        .btn:hover { box-shadow: 0 0 30px var(--accent); transform: scale(1.05); }
+
+        .footer { padding: 50px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
+        .footer a { color: var(--accent); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="glass">
+        <div class="logo">MEN<span>WEAR</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cloth.html">Cloth</a>
+            <a href="shoe.html">Shoes</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-box glass">
+            <h1>MENWEAR <br><span>INDIA</span></h1>
+            <p style="margin-bottom: 30px; opacity: 0.8;">The ultimate destination for Traditional & Modern Men's Wear.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="cloth.html" class="btn">Shop Cloth</a>
+                <a href="shoe.html" class="btn" style="background: white;">Shop Shoes</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Contact us: <a href="tel:+917814230949">+91 7814230949</a></p>
+    </footer>
+</body>
+</html>
