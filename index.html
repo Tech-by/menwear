@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <meta name="description" content="Sonia Collection - Luxury women's wear & bum shot specialists at Permanent Site, Akungba. Shop premium quality with fast delivery & WhatsApp orders.">
+  <meta name="description" content="Sonia Collection - Luxury women's wear & bum shot specialists at Permanent Site, Akungba. Premium quality, fast delivery & WhatsApp orders.">
   <title>Sonia Collection | Luxury Bum Shot & Women's Wear</title>
-  <!-- Google Fonts + Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Leaflet CSS + Geocoder -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -24,15 +24,16 @@
       color: #1A1A1A;
       scroll-behavior: smooth;
       line-height: 1.4;
+      overflow-x: hidden;
     }
 
-    /* luxury modern palette: black, cream, gold accents */
+    /* luxury palette */
     :root {
       --gold: #C5A267;
-      --gold-light: #E4CFA3;
+      --gold-dark: #A67C45;
+      --gold-light: #F3E9D2;
       --dark: #1E1E1E;
       --cream: #FDF9F2;
-      --gray-light: #F5F2EE;
       --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05);
       --shadow-md: 0 20px 35px -8px rgba(0,0,0,0.08);
     }
@@ -43,7 +44,7 @@
       padding: 0 20px;
     }
 
-    /* header */
+    /* navbar */
     .navbar {
       padding: 18px 0;
       display: flex;
@@ -51,11 +52,12 @@
       align-items: center;
       flex-wrap: wrap;
       border-bottom: 1px solid rgba(0,0,0,0.05);
+      gap: 15px;
     }
     .logo h1 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.5px;
       background: linear-gradient(135deg, #1E1E1E 30%, #C5A267 80%);
       background-clip: text;
@@ -68,14 +70,10 @@
       color: #7a6e5a;
       font-weight: 500;
     }
-    .header-cta {
-      display: flex;
-      gap: 12px;
-    }
     .btn-wa-header {
       background: #25D366;
       color: white;
-      padding: 8px 18px;
+      padding: 8px 20px;
       border-radius: 40px;
       font-size: 0.85rem;
       font-weight: 600;
@@ -84,27 +82,21 @@
       gap: 8px;
       transition: all 0.2s;
     }
-    .btn-wa-header:hover {
-      background: #128C7E;
-      transform: scale(0.97);
-    }
+    .btn-wa-header:hover { background: #128C7E; transform: scale(0.97); }
 
     /* hero */
     .hero {
-      padding: 50px 0 40px;
+      padding: 48px 0 32px;
       text-align: center;
     }
     .hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      font-weight: 600;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: #1A1A1A;
       line-height: 1.2;
     }
-    .hero h2 span {
-      color: var(--gold);
-      border-bottom: 2px solid var(--gold);
-    }
+    .hero h2 span { color: var(--gold); border-bottom: 2px solid var(--gold); }
     .hero p {
       font-size: 1rem;
       color: #4a4a4a;
@@ -114,44 +106,50 @@
     .hero-badge {
       background: var(--gold-light);
       display: inline-block;
-      padding: 6px 18px;
+      padding: 6px 20px;
       border-radius: 40px;
       font-weight: 600;
       font-size: 0.8rem;
       margin-bottom: 18px;
-      color: #2c2b26;
     }
 
-    /* product grid */
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
+    /* section headers */
+    .section-header {
       text-align: center;
-      margin: 48px 0 24px;
-      position: relative;
+      margin: 56px 0 28px;
     }
-    .section-title:after {
-      content: '';
-      display: block;
+    .section-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1E1E1E;
+    }
+    .section-header p {
+      color: #7a6e5a;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+    .section-header .gold-line {
       width: 70px;
       height: 3px;
       background: var(--gold);
       margin: 12px auto 0;
       border-radius: 4px;
     }
+
+    /* product grid */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 32px;
-      margin: 32px 0 20px;
+      margin: 20px 0 20px;
     }
     .product-card {
       background: white;
       border-radius: 28px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
-      transition: all 0.25s ease;
-      cursor: pointer;
+      transition: all 0.3s ease;
       border: 1px solid #f0ebe3;
     }
     .product-card:hover {
@@ -163,12 +161,10 @@
       width: 100%;
       aspect-ratio: 1 / 1.1;
       object-fit: cover;
-      background: #f2ede5;
+      background: #f8f4ed;
       transition: transform 0.4s;
     }
-    .product-card:hover .product-img {
-      transform: scale(1.02);
-    }
+    .product-card:hover .product-img { transform: scale(1.02); }
     .product-info {
       padding: 20px 18px 22px;
     }
@@ -176,14 +172,21 @@
       font-size: 1.25rem;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
+      margin-bottom: 6px;
+    }
+    .product-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      font-weight: 600;
       margin-bottom: 8px;
     }
     .product-price {
       font-size: 1.5rem;
       font-weight: 700;
       color: #C5A267;
-      margin: 8px 0;
-      letter-spacing: -0.3px;
+      margin: 10px 0 8px;
     }
     .product-price small {
       font-size: 0.8rem;
@@ -212,15 +215,13 @@
       transition: 0.2s;
       cursor: pointer;
     }
-    .btn-order i {
-      font-size: 1.1rem;
-    }
+    .btn-order i { font-size: 1.1rem; }
     .btn-order:hover {
       background: #C5A267;
       color: #1E1E1E;
     }
 
-    /* trust / luxury badge row */
+    /* trust badges */
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -231,23 +232,17 @@
     .feature-item {
       text-align: center;
       flex: 1;
-      min-width: 130px;
+      min-width: 120px;
     }
     .feature-item i {
       font-size: 2rem;
       color: var(--gold);
       margin-bottom: 12px;
     }
-    .feature-item h4 {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    .feature-item p {
-      font-size: 0.75rem;
-      color: #6b5e4e;
-    }
+    .feature-item h4 { font-weight: 700; font-size: 1rem; margin-top: 5px; }
+    .feature-item p { font-size: 0.75rem; color: #6b5e4e; }
 
-    /* map section + GPS search */
+    /* map section */
     .map-section {
       background: white;
       border-radius: 36px;
@@ -262,7 +257,7 @@
     .map-header h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.7rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     .map-header p {
       color: #5b5346;
@@ -270,7 +265,7 @@
       margin-top: 5px;
     }
     #map {
-      height: 320px;
+      height: 330px;
       width: 100%;
       z-index: 1;
     }
@@ -297,11 +292,11 @@
       border-radius: 40px;
       font-weight: 600;
       font-size: 0.8rem;
-      color: #2b2b2b;
       transition: 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      color: #2b2b2b;
     }
     .btn-google-maps:hover {
       background: var(--gold);
@@ -323,10 +318,9 @@
       margin: 0 12px;
       font-size: 1.3rem;
       transition: 0.2s;
+      display: inline-block;
     }
-    .social-links a:hover {
-      color: var(--gold);
-    }
+    .social-links a:hover { color: var(--gold); }
 
     /* floating WhatsApp */
     .float-wa {
@@ -346,64 +340,24 @@
       z-index: 100;
       transition: all 0.2s;
     }
-    .float-wa:hover {
-      transform: scale(1.05);
-      background: #20b859;
-    }
+    .float-wa:hover { transform: scale(1.05); background: #20b859; }
 
     /* mobile perfection */
     @media (max-width: 640px) {
-      .container {
-        padding: 0 16px;
-      }
-      .navbar {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-      }
-      .hero h2 {
-        font-size: 1.8rem;
-      }
-      .section-title {
-        font-size: 1.6rem;
-      }
-      .products-grid {
-        gap: 20px;
-      }
-      .product-info {
-        padding: 16px;
-      }
-      .btn-order {
-        padding: 10px 0;
-      }
-      .map-header h3 {
-        font-size: 1.4rem;
-      }
-      .map-directions {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .float-wa {
-        width: 48px;
-        height: 48px;
-        font-size: 24px;
-        bottom: 20px;
-        right: 16px;
-      }
+      .container { padding: 0 16px; }
+      .navbar { flex-direction: column; text-align: center; }
+      .hero h2 { font-size: 1.9rem; }
+      .section-header h3 { font-size: 1.6rem; }
+      .products-grid { gap: 20px; }
+      .product-info { padding: 16px; }
+      .btn-order { padding: 10px 0; }
+      .map-header h3 { font-size: 1.4rem; }
+      .map-directions { flex-direction: column; align-items: flex-start; }
+      .float-wa { width: 48px; height: 48px; font-size: 24px; bottom: 20px; right: 16px; }
     }
-
-    /* fast loading & images */
-    img {
-      max-width: 100%;
-      display: block;
-    }
-    a {
-      text-decoration: none;
-    }
-    button {
-      background: none;
-      border: none;
-    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+    button { background: none; border: none; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -416,7 +370,7 @@
       <p>LUXURY WOMENSWEAR & BUM SHOT</p>
     </div>
     <div class="header-cta">
-      <a href="https://wa.me/2348123456789?text=Hello%20Sonia%20Collection%2C%20I%27d%20like%20to%20browse%20your%20luxury%20collection!" class="btn-wa-header" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+      <a href="https://wa.me/2348123456789?text=Hello%20Sonia%20Collection%2C%20I'd%20like%20to%20explore%20your%20luxury%20collection!" class="btn-wa-header" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </div>
 
@@ -425,64 +379,98 @@
     <div class="hero-badge"><i class="fas fa-crown"></i> Premium Quality • Akungba's Finest</div>
     <h2>Define Your Elegance <span>with Sonia</span></h2>
     <p>Exquisite Bum Shot & Women's Clothing — Tailored for the modern queen. Shop authentic luxury at Permanent Site, Akungba.</p>
-    <a href="#products" style="display: inline-block; background: #1E1E1E; color: white; padding: 12px 28px; border-radius: 40px; font-weight: 600; margin-top: 10px;"><i class="fas fa-shopping-bag"></i> Explore Collection</a>
+    <a href="#products" style="display: inline-block; background: #1E1E1E; color: white; padding: 12px 28px; border-radius: 40px; font-weight: 600;"><i class="fas fa-shopping-bag"></i> Explore Collection</a>
   </div>
 
   <!-- Trust badges -->
   <div class="features">
-    <div class="feature-item"><i class="fas fa-truck"></i><h4>Fast Delivery</h4><p>Within Akungba & nationwide</p></div>
+    <div class="feature-item"><i class="fas fa-truck"></i><h4>Fast Delivery</h4><p>Akungba & nationwide</p></div>
     <div class="feature-item"><i class="fas fa-gem"></i><h4>Premium Fabrics</h4><p>Luxury finish & comfort</p></div>
-    <div class="feature-item"><i class="fas fa-credit-card"></i><h4>Secure Order</h4><p>Pay on delivery available</p></div>
+    <div class="feature-item"><i class="fas fa-credit-card"></i><h4>Secure Order</h4><p>Pay on Delivery available</p></div>
   </div>
 
-  <!-- Products Section: Bum Shot + Women Cloth Wear with Nigeria Prices -->
+  <!-- Bum Shot Section -->
   <div id="products">
-    <div class="section-title">✨ Signature Collection ✨</div>
-    <div class="products-grid" id="productGrid">
-      <!-- product 1: Bum Shot -->
+    <div class="section-header">
+      <h3>🍑 Bum Shot Essentials</h3>
+      <div class="gold-line"></div>
+      <p>Sculpt, lift & enhance — premium shapewear for perfect curves</p>
+    </div>
+    <div class="products-grid" id="bumshotGrid">
+      <!-- 3 bum shot products -->
       <div class="product-card" data-name="Signature Bum Shot Shorts" data-price="19999">
-        <img class="product-img" src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&auto=format" alt="Luxury Bum Shot shorts" loading="lazy">
+        <img class="product-img" src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format" alt="Luxury bum shot shorts" loading="lazy">
         <div class="product-info">
-          <div class="product-title">Signature Bum Shot Shorts</div>
+          <div class="product-category">Bum Shot</div>
+          <div class="product-title">Signature Bum Shorts</div>
           <div class="product-price">₦19,999 <small>NGN</small></div>
-          <div class="product-desc">Butt-lifting & sculpting fit | Breathable lycra, perfect for daily chic & shape enhancement.</div>
+          <div class="product-desc">Butt-lifting & breathable lycra, invisible under jeans & dresses.</div>
           <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
         </div>
       </div>
-      <!-- product 2: Bum Shot Premium -->
       <div class="product-card" data-name="Luxe Booty Firm Control" data-price="24500">
-        <img class="product-img" src="https://images.unsplash.com/photo-1605347220242-4d3a1b1c2b0d?w=500&auto=format" alt="Premium Bum Shot shapewear" loading="lazy">
+        <img class="product-img" src="https://images.unsplash.com/photo-1605347220242-4d3a1b1c2b0d?w=600&auto=format" alt="High waist bum enhancer" loading="lazy">
         <div class="product-info">
+          <div class="product-category">Bum Shot</div>
           <div class="product-title">Luxe Booty Firm Control</div>
           <div class="product-price">₦24,500 <small>NGN</small></div>
-          <div class="product-desc">High-waist seamless bum enhancer, invisible under dresses. Curve perfection.</div>
+          <div class="product-desc">High-waist seamless enhancer, 2-in-1 tummy control + lift.</div>
           <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
         </div>
       </div>
-      <!-- product 3: Women Cloth - Midi Dress -->
-      <div class="product-card" data-name="Golden Hour Lace Midi Dress" data-price="45000">
-        <img class="product-img" src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=500&auto=format" alt="Elegant lace midi dress" loading="lazy">
+      <div class="product-card" data-name="Push-Up Padded Bum Shorts" data-price="22500">
+        <img class="product-img" src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600&auto=format" alt="Padded bum shot shorts" loading="lazy">
         <div class="product-info">
+          <div class="product-category">Bum Shot</div>
+          <div class="product-title">Push-Up Padded Shorts</div>
+          <div class="product-price">₦22,500 <small>NGN</small></div>
+          <div class="product-desc">Removable pads, maximum volume + breathable cotton blend.</div>
+          <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Women's Wear Section -->
+    <div class="section-header">
+      <h3>👗 Luxury Women's Wear</h3>
+      <div class="gold-line"></div>
+      <p>Elegant dresses, sets & statement pieces for every occasion</p>
+    </div>
+    <div class="products-grid" id="womensGrid">
+      <div class="product-card" data-name="Golden Hour Lace Midi Dress" data-price="45000">
+        <img class="product-img" src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&auto=format" alt="Lace midi dress" loading="lazy">
+        <div class="product-info">
+          <div class="product-category">Women's Wear</div>
           <div class="product-title">Golden Hour Lace Midi</div>
           <div class="product-price">₦45,000 <small>NGN</small></div>
-          <div class="product-desc">Intricate lace overlay, satin lining – regal silhouette for parties & weddings.</div>
+          <div class="product-desc">Intricate lace overlay, satin lining – regal silhouette for parties.</div>
           <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
         </div>
       </div>
-      <!-- product 4: Women Cloth - 2 piece set -->
       <div class="product-card" data-name="Sonia Silk Two-Piece Set" data-price="55000">
-        <img class="product-img" src="https://images.unsplash.com/photo-1581044777551-8869d68c8c3c?w=500&auto=format" alt="Luxury two piece women outfit" loading="lazy">
+        <img class="product-img" src="https://images.unsplash.com/photo-1581044777551-8869d68c8c3c?w=600&auto=format" alt="Silk two piece outfit" loading="lazy">
         <div class="product-info">
-          <div class="product-title">Sonia Silk Two-Piece Set</div>
+          <div class="product-category">Women's Wear</div>
+          <div class="product-title">Sonia Silk Two-Piece</div>
           <div class="product-price">₦55,000 <small>NGN</small></div>
-          <div class="product-desc">Contemporary elegance: blazer-style top + wide-leg pants. Premium Nigerian luxury.</div>
+          <div class="product-desc">Blazer-style top + wide-leg pants, pure luxury for events.</div>
+          <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+        </div>
+      </div>
+      <div class="product-card" data-name="Off-Shoulder Gown (Premium)" data-price="65000">
+        <img class="product-img" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&auto=format" alt="Off shoulder luxury gown" loading="lazy">
+        <div class="product-info">
+          <div class="product-category">Women's Wear</div>
+          <div class="product-title">Off-Shoulder Gown</div>
+          <div class="product-price">₦65,000 <small>NGN</small></div>
+          <div class="product-desc">Floor-length satin gown, dramatic ruffle detail – red carpet ready.</div>
           <button class="btn-order order-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- GPS Map Section with SEARCH + location -->
+  <!-- GPS Map Section -->
   <div class="map-section">
     <div class="map-header">
       <h3><i class="fas fa-map-marker-alt" style="color: #C5A267;"></i> Visit Our Boutique</h3>
@@ -511,25 +499,20 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Leaflet JS + Geocoder + custom map -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet JS + Geocoder -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
 <script>
-  // ================== CONFIGURATION ==================
-  // Replace this number with the client's actual WhatsApp phone number (international format without '+')
-  // Example: for Nigeria +234 812 345 6789 -> 2348123456789
-  const BUSINESS_PHONE = "2348123456789";  // <--- UPDATE WITH CLIENT'S REAL NUMBER
-
-  // Sonia Collection GPS coordinates (Permanent Site, Akungba Akoko, Ondo)
+  // CONFIGURATION: Replace with client's actual WhatsApp number (Nigeria format without '+')
+  const BUSINESS_PHONE = "2348123456789";  // UPDATE TO REAL NUMBER
   const STORE_LAT = 7.4690;
   const STORE_LNG = 5.7340;
 
-  // ================== WHATSAPP ORDER LOGIC ==================
-  function setupWhatsAppButtons() {
-    const orderBtns = document.querySelectorAll('.order-btn');
-    orderBtns.forEach(btn => {
+  // WhatsApp order handler for all product buttons
+  function setupWhatsApp() {
+    const btns = document.querySelectorAll('.order-btn');
+    btns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         const card = btn.closest('.product-card');
@@ -537,100 +520,69 @@
         const productName = card.getAttribute('data-name') || card.querySelector('.product-title')?.innerText || 'Product';
         const priceRaw = card.getAttribute('data-price') || (card.querySelector('.product-price')?.innerText.replace(/[^0-9]/g, '') || '0');
         const priceFormatted = `₦${parseInt(priceRaw).toLocaleString()}`;
-        const message = `Hello Sonia Collection! I'm interested in ordering *${productName}* for ${priceFormatted}. Please confirm availability, delivery to Akungba/outside, and payment options. Thank you!`;
-        const encodedMsg = encodeURIComponent(message);
-        const waLink = `https://wa.me/${BUSINESS_PHONE}?text=${encodedMsg}`;
+        const message = `Hello Sonia Collection! I'm interested in ordering *${productName}* for ${priceFormatted}. Please confirm availability and delivery to Akungba (or outside). Thank you!`;
+        const waLink = `https://wa.me/${BUSINESS_PHONE}?text=${encodeURIComponent(message)}`;
         window.open(waLink, '_blank');
       });
     });
   }
 
-  // ================== LEAFLET MAP WITH GPS & SEARCH ==================
+  // Initialize Leaflet Map with GPS Search
   function initMap() {
-    // coordinates for Sonia Collection - Permanent Site Akungba
-    const storeLocation = [STORE_LAT, STORE_LNG];
-    const map = L.map('map').setView(storeLocation, 16);
+    const storeCoords = [STORE_LAT, STORE_LNG];
+    const map = L.map('map').setView(storeCoords, 16);
 
-    // elegant tile (light, luxury style)
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; CartoDB',
       subdomains: 'abcd',
-      maxZoom: 19,
-      minZoom: 12
+      maxZoom: 19
     }).addTo(map);
 
-    // custom marker with gold icon
-    const soniaIcon = L.divIcon({
-      html: '<i class="fas fa-store" style="font-size: 28px; color: #C5A267; text-shadow: 0 2px 4px rgba(0,0,0,0.2);"></i>',
-      iconSize: [30, 40],
-      className: 'custom-div-icon',
-      popupAnchor: [0, -20]
+    // Custom gold marker
+    const customIcon = L.divIcon({
+      html: '<div style="background-color: #C5A267; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border: 2px solid white;"><i class="fas fa-crown" style="color: white; font-size: 18px;"></i></div>',
+      iconSize: [36, 36],
+      className: 'gold-marker'
     });
-    // fallback: use default marker but we use beautiful marker with fontawesome
-    const marker = L.marker(storeLocation, {
-      icon: L.divIcon({
-        html: '<div style="background-color: #C5A267; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);"><i class="fas fa-crown" style="color: white; font-size: 16px;"></i></div>',
-        iconSize: [32, 32],
-        className: 'gold-marker'
-      })
-    }).addTo(map);
+    const marker = L.marker(storeCoords, { icon: customIcon }).addTo(map);
     marker.bindPopup('<b>Sonia Collection</b><br>Luxury Womenwear & Bum Shot<br>📍 Permanent Site, Akungba').openPopup();
 
-    // optional: add a second marker effect but just precise
-    // Add geocoder search (GPS location search for user)
+    // Add geocoder search
     const geocoder = new L.Control.Geocoder({
       defaultMarkGeocode: true,
       position: 'topleft',
       placeholder: '🔍 Search location...',
       errorMessage: 'Location not found',
-      collapsed: false,  // on mobile collapses? But we make sure it's visible and mobile-friendly
+      collapsed: false
     }).addTo(map);
 
-    // When user geocodes, optionally zoom and show marker
     geocoder.on('markgeocode', function(e) {
       const bbox = e.geocode.bbox;
-      const center = e.geocode.center;
-      map.fitBounds(bbox);
-      // optional extra popup info
+      if (bbox) map.fitBounds(bbox);
+      else map.setView(e.geocode.center, 15);
       L.popup()
-        .setLatLng(center)
+        .setLatLng(e.geocode.center)
         .setContent(`📍 Searched: ${e.geocode.name}<br>Near Sonia Collection boutique.`)
         .openOn(map);
     });
 
-    // also add a small reset view button? but not needed
-    // Mobile touch optimization
-    map.on('load', () => {
-      setTimeout(() => { map.invalidateSize(); }, 200);
-    });
-    window.addEventListener('resize', () => { map.invalidateSize(); });
+    // Force resize on mobile
+    setTimeout(() => map.invalidateSize(), 200);
+    window.addEventListener('resize', () => map.invalidateSize());
   }
 
-  // ================== FAST SCROLL & LOAD ==================
   document.addEventListener('DOMContentLoaded', () => {
-    setupWhatsAppButtons();
+    setupWhatsApp();
     initMap();
-
-    // small fix for leaflet icons if FontAwesome loaded
-    // ensure map container is fully rendered
-    setTimeout(() => {
-      if (window.L && document.getElementById('map')) {
-        window.dispatchEvent(new Event('resize'));
-      }
-    }, 300);
   });
-
-  // Also lazy load images: already using loading="lazy"
-  // For better mobile perf, product hover transforms will be smooth
 </script>
 
-<!-- Extra style for gold marker and geocoder responsiveness -->
 <style>
   .leaflet-control-geocoder {
     border-radius: 40px !important;
     border: 1px solid #e2d6c8 !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
     background: white !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
   .leaflet-control-geocoder-form input {
     font-family: 'Inter', sans-serif !important;
@@ -643,57 +595,26 @@
     border-radius: 0 40px 40px 0 !important;
   }
   @media (max-width: 550px) {
-    .leaflet-control-geocoder {
-      width: 200px !important;
-    }
-    .leaflet-control-geocoder-form input {
-      font-size: 12px !important;
-    }
-    .map-directions .btn-google-maps {
-      font-size: 0.75rem;
-      padding: 8px 14px;
-    }
-    .product-price {
-      font-size: 1.3rem;
-    }
+    .leaflet-control-geocoder { width: 200px !important; }
+    .leaflet-control-geocoder-form input { font-size: 12px !important; }
   }
-  .gold-marker {
-    background: transparent;
-  }
-  .custom-div-icon i {
-    font-size: 32px;
-  }
-  /* smooth scrolling */
-  html {
-    scroll-padding-top: 20px;
-  }
-  .btn-order:active {
-    transform: scale(0.97);
-  }
-  a, button {
-    -webkit-tap-highlight-color: transparent;
-  }
+  .btn-order:active { transform: scale(0.97); }
+  html { scroll-padding-top: 20px; scroll-behavior: smooth; }
 </style>
 
-<!-- pricing note for client (visible in code comment but also text) -->
 <!-- 
-  ===================== PRICING ADVICE FOR CLIENT =====================
-  For a fully responsive, high-conversion luxury brand landing page with:
-  - Modern product gallery (bum shot + women clothing)
-  - WhatsApp ordering integration (per product + floating button)
-  - GPS interactive map with location search (Leaflet + Geocoder)
-  - Nigerian prices and mobile-optimized fast scrolling
-  - Custom modern luxury UI/UX, trust badges, and smooth animations
-  
-  Typical freelance / agency charges: 
-    - Base design & dev: ₦150,000 - ₦250,000 (depending on complexity)
-    - If client provides product images/content: lower end
-    - Includes WhatsApp setup, map configuration, and responsive testing
-    - Additional support/maintenance: ₦30,000 - ₦50,000 monthly optional
-  
-  Recommended to charge: ₦200,000 (approx $120-$130 USD equivalent) for this complete package.
-  Adjust for extra features (CMS, inventory) or faster delivery.  
-  Provide clear documentation on how to replace phone number, product images, and map coordinates.
+  ======================= PRICING ADVICE FOR CLIENT =======================
+  For this high-conversion luxury page with:
+  - 6 product showcase (bum shot + women's wear)
+  - Fully mobile responsive (tested on all screen sizes)
+  - GPS map with search (Leaflet + OpenStreetMap)
+  - WhatsApp ordering per product + floating button
+  - Nigerian prices, modern luxury design, fast loading
+
+  Recommended charge: ₦180,000 – ₦250,000 NGN (depending on client budget & extra revisions)
+  Typical rate for such complete static landing page: ₦200,000
+  Includes: design, development, mobile optimization, map integration, WhatsApp setup.
+  Client can easily replace images, phone number, prices via HTML edits.
 -->
 </body>
 </html>
